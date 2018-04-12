@@ -13,22 +13,23 @@
     
     
     <meta name="description" content="引言　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。
-H5调用Android原生的方法　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。
+Js调用Android原生的方法　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。
 创建接口对象开启WebView支持　　这一步就是让WebView">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Android原生与H5之间的交互">
 <meta property="og:url" content="http://yoursite.com/2016/04/13/Android原生与H5之间的交互/index.html">
 <meta property="og:site_name" content="Winton's Blog">
 <meta property="og:description" content="引言　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。
-H5调用Android原生的方法　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。
+Js调用Android原生的方法　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。
 创建接口对象开启WebView支持　　这一步就是让WebView">
-<meta property="og:image" content="http://img4.duitang.com/uploads/item/201406/25/20140625183156_WNia4.jpeg">
 <meta property="og:image" content="http://news.k618.cn/roll/201706/W020170607727364801229.png">
-<meta property="og:updated_time" content="2018-04-12T09:25:48.297Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523541251728&di=2051e876e48ad8fac8481816ce5746ae&imgtype=0&src=http%3A%2F%2Fwanzao2.b0.upaiyun.com%2Fsystem%2Fpictures%2F37317948%2Foriginal%2F1468993411_600x600.png">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523542320679&di=531d67c8743d7677948b47db88805314&imgtype=0&src=http%3A%2F%2Fwww.xz7.com%2Fup%2F2017-8%2F20178995340.jpg">
+<meta property="og:updated_time" content="2018-04-12T11:24:54.816Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android原生与H5之间的交互">
 <meta name="twitter:description" content="引言　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。
-H5调用Android原生的方法　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。
+Js调用Android原生的方法　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。
 创建接口对象开启WebView支持　　这一步就是让WebView">
     
     
@@ -205,12 +206,18 @@ H5调用Android原生的方法　　就是指我们在html页面调用Andorid本
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p><img src="http://img4.duitang.com/uploads/item/201406/25/20140625183156_WNia4.jpeg" alt="head_img"></p>
-<h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。<br><img src="http://news.k618.cn/roll/201706/W020170607727364801229.png" alt="fun_img"></p>
-<h2 id="H5_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5"><a href="#H5_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5" class="headerlink" title="H5调用Android原生的方法"></a>H5调用Android原生的方法</h2><p>　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。</p>
+            <h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。<br><img src="http://news.k618.cn/roll/201706/W020170607727364801229.png" alt="fun_img"></p>
+<h2 id="Js_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5"><a href="#Js_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5" class="headerlink" title="Js调用Android原生的方法"></a>Js调用Android原生的方法</h2><p>　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。</p>
 <h3 id="u521B_u5EFA_u63A5_u53E3_u5BF9_u8C61"><a href="#u521B_u5EFA_u63A5_u53E3_u5BF9_u8C61" class="headerlink" title="创建接口对象"></a>创建接口对象</h3><h3 id="u5F00_u542FWebView_u652F_u6301"><a href="#u5F00_u542FWebView_u652F_u6301" class="headerlink" title="开启WebView支持"></a>开启WebView支持</h3><p>　　这一步就是让WebView支持js调用Java本地的方法，示例代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mWebView.getSettings().setJavaScriptEnabled(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="u7F16_u5199_u672C_u5730_u65B9_u6CD5_u7528_u4E8Ejs_u8C03_u7528"><a href="#u7F16_u5199_u672C_u5730_u65B9_u6CD5_u7528_u4E8Ejs_u8C03_u7528" class="headerlink" title="编写本地方法用于js调用"></a>编写本地方法用于js调用</h3>
+<h3 id="u7F16_u5199_u672C_u5730_u65B9_u6CD5_u7528_u4E8Ejs_u8C03_u7528"><a href="#u7F16_u5199_u672C_u5730_u65B9_u6CD5_u7528_u4E8Ejs_u8C03_u7528" class="headerlink" title="编写本地方法用于js调用"></a>编写本地方法用于js调用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaScriptObject</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Context mContext;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JavaScriptObject</span><span class="params">(Context context)</span></span>&#123;</span><br><span class="line">       mContext = context;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="annotation">@JavascriptInterface</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasBindBox</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> result = <span class="keyword">false</span> ;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u6CE8_u518C_u65B9_u6CD5_u5BF9_u8C61"><a href="#u6CE8_u518C_u65B9_u6CD5_u5BF9_u8C61" class="headerlink" title="注册方法对象"></a>注册方法对象</h3><p>　　在对WebView进行初始化时，通过下面的方法将持有方法的对象进行注册，这里相当于localFunc就是一个JavaScriptObjecte类的对象。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mWebView.addJavascriptInterface(<span class="keyword">new</span> JavaScriptObject(<span class="keyword">this</span>),<span class="string">"localFunc"</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="u8C03_u7528"><a href="#u8C03_u7528" class="headerlink" title="调用"></a>调用</h3><p>　　在需要调用相关方法的js中可以直接调用，实现js与原生的交互。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localFunc.hasBindBox();</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1523541251728&amp;di=2051e876e48ad8fac8481816ce5746ae&amp;imgtype=0&amp;src=http%3A%2F%2Fwanzao2.b0.upaiyun.com%2Fsystem%2Fpictures%2F37317948%2Foriginal%2F1468993411_600x600.png" alt="fun_img"></p>
+<h2 id="u539F_u751F_u8C03_u7528Js_u7684_u65B9_u6CD5"><a href="#u539F_u751F_u8C03_u7528Js_u7684_u65B9_u6CD5" class="headerlink" title="原生调用Js的方法"></a>原生调用Js的方法</h2><p>　　这个就更简单了，说出来你可能不信，只需要一行代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mWebView.loadUrl(<span class="string">"javascript:setText('hello world')"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>　　其中setText()方法就是我们当前html页面的一个js方法，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setText</span> (<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> tx = <span class="built_in">document</span>.getElementById(<span class="string">"tx"</span>);</span><br><span class="line">        tx.value=text;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　是不是炒鸡简单，哈哈哈！！！<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1523542320679&amp;di=531d67c8743d7677948b47db88805314&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.xz7.com%2Fup%2F2017-8%2F20178995340.jpg" alt="go"></p>
+
             
                 
 
