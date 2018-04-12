@@ -24,7 +24,7 @@ H5调用Android原生的方法　　就是指我们在html页面调用Andorid本
 创建接口对象开启WebView支持　　这一步就是让WebView">
 <meta property="og:image" content="http://img4.duitang.com/uploads/item/201406/25/20140625183156_WNia4.jpeg">
 <meta property="og:image" content="http://news.k618.cn/roll/201706/W020170607727364801229.png">
-<meta property="og:updated_time" content="2018-04-12T08:29:39.369Z">
+<meta property="og:updated_time" content="2018-04-12T08:34:42.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android原生与H5之间的交互">
 <meta name="twitter:description" content="引言　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。
@@ -209,7 +209,8 @@ H5调用Android原生的方法　　就是指我们在html页面调用Andorid本
 <h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。<br><img src="http://news.k618.cn/roll/201706/W020170607727364801229.png" alt="fun_img"></p>
 <h2 id="H5_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5"><a href="#H5_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5" class="headerlink" title="H5调用Android原生的方法"></a>H5调用Android原生的方法</h2><p>　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。</p>
 <h3 id="u521B_u5EFA_u63A5_u53E3_u5BF9_u8C61"><a href="#u521B_u5EFA_u63A5_u53E3_u5BF9_u8C61" class="headerlink" title="创建接口对象"></a>创建接口对象</h3><h3 id="u5F00_u542FWebView_u652F_u6301"><a href="#u5F00_u542FWebView_u652F_u6301" class="headerlink" title="开启WebView支持"></a>开启WebView支持</h3><p>　　这一步就是让WebView支持js调用Java本地的方法，示例代码如下：</p>
-<table><tr><td bgcolor="#000000"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mWebView.getSettings().setJavaScriptEnabled(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure><br><br></td></tr></table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#000000"&gt;&lt;font color="#ffffff"&gt;</span><br><span class="line">mWebView.getSettings().setJavaScriptEnabled(true);</span><br><span class="line">&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
             
                 
 
