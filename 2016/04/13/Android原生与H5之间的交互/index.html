@@ -25,7 +25,7 @@ Js调用Android原生的方法　　就是指我们在html页面调用Andorid本
 <meta property="og:image" content="http://news.k618.cn/roll/201706/W020170607727364801229.png">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523541251728&di=2051e876e48ad8fac8481816ce5746ae&imgtype=0&src=http%3A%2F%2Fwanzao2.b0.upaiyun.com%2Fsystem%2Fpictures%2F37317948%2Foriginal%2F1468993411_600x600.png">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523542320679&di=531d67c8743d7677948b47db88805314&imgtype=0&src=http%3A%2F%2Fwww.xz7.com%2Fup%2F2017-8%2F20178995340.jpg">
-<meta property="og:updated_time" content="2018-04-12T11:24:54.816Z">
+<meta property="og:updated_time" content="2018-05-02T05:43:06.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android原生与H5之间的交互">
 <meta name="twitter:description" content="引言　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。
@@ -206,7 +206,8 @@ Js调用Android原生的方法　　就是指我们在html页面调用Andorid本
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。<br><img src="http://news.k618.cn/roll/201706/W020170607727364801229.png" alt="fun_img"></p>
+            <hr>
+<h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　应用开发中经常会遇到原生应用与H5交互的问题，作为开发者需要掌握这方面的知识，才能很好的解决问题，作为要开始加速的新司机，这里做一番总结。<br><img src="http://news.k618.cn/roll/201706/W020170607727364801229.png" alt="fun_img"></p>
 <h2 id="Js_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5"><a href="#Js_u8C03_u7528Android_u539F_u751F_u7684_u65B9_u6CD5" class="headerlink" title="Js调用Android原生的方法"></a>Js调用Android原生的方法</h2><p>　　就是指我们在html页面调用Andorid本身或者我们自己写的Java方法(好想画个图)，这一块相对来说是比较简单的，具体的步骤和方法，我罗列在下面。</p>
 <h3 id="u521B_u5EFA_u63A5_u53E3_u5BF9_u8C61"><a href="#u521B_u5EFA_u63A5_u53E3_u5BF9_u8C61" class="headerlink" title="创建接口对象"></a>创建接口对象</h3><h3 id="u5F00_u542FWebView_u652F_u6301"><a href="#u5F00_u542FWebView_u652F_u6301" class="headerlink" title="开启WebView支持"></a>开启WebView支持</h3><p>　　这一步就是让WebView支持js调用Java本地的方法，示例代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mWebView.getSettings().setJavaScriptEnabled(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
