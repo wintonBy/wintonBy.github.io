@@ -14,25 +14,22 @@
     
     <meta name="description" content="引言　　Activity启动模式是一个老生常谈的话题，但平时并没有仔细去推敲，所以呢，就有了这篇文章呀，哈哈哈，找个理由写博客！
 概念　　所谓启动模式，是指我们为打开Activity而设置的一个标记。这个标记的值总共有四种：
-standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。
-singleTop：当Activi">
+standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。singleTop：当Activit">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="再谈一次Activity启动模式">
 <meta property="og:url" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/index.html">
 <meta property="og:site_name" content="Winton's Blog">
 <meta property="og:description" content="引言　　Activity启动模式是一个老生常谈的话题，但平时并没有仔细去推敲，所以呢，就有了这篇文章呀，哈哈哈，找个理由写博客！
 概念　　所谓启动模式，是指我们为打开Activity而设置的一个标记。这个标记的值总共有四种：
-standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。
-singleTop：当Activi">
+standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。singleTop：当Activit">
 <meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/timg.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/2.jpg">
-<meta property="og:updated_time" content="2018-05-06T09:33:40.120Z">
+<meta property="og:updated_time" content="2018-05-13T09:37:27.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再谈一次Activity启动模式">
 <meta name="twitter:description" content="引言　　Activity启动模式是一个老生常谈的话题，但平时并没有仔细去推敲，所以呢，就有了这篇文章呀，哈哈哈，找个理由写博客！
 概念　　所谓启动模式，是指我们为打开Activity而设置的一个标记。这个标记的值总共有四种：
-standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。
-singleTop：当Activi">
+standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。singleTop：当Activit">
     
     
     
@@ -215,11 +212,11 @@ singleTop：当Activi">
 <p><img src="/2018/05/06/再谈一次Activity启动模式/timg.jpg" alt="img"></p>
 <h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　Activity启动模式是一个老生常谈的话题，但平时并没有仔细去推敲，所以呢，就有了这篇文章呀，哈哈哈，找个理由写博客！<br><img src="/2018/05/06/再谈一次Activity启动模式/2.jpg" alt="img"></p>
 <h2 id="u6982_u5FF5"><a href="#u6982_u5FF5" class="headerlink" title="概念"></a>概念</h2><p>　　所谓启动模式，是指我们为打开Activity而设置的一个标记。这个标记的值总共有四种：</p>
-<p><li>standard</li>：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。</p>
-<p><li>singleTop</li>：当Activity处在栈顶时，创建新的Activity直接复用当前Activity，若Activity存在于任务栈中但是不在栈顶，则会重新创建一个新的Activity。</p>
-<p><li>singleTask</li>：当Activity在栈顶时，原理同singleTop，当Activity存在于任务栈但不在栈顶时，依旧会复用此Activity，同时销毁其上方的Activity，使它位于栈顶</p>
-<p><li>singleInstance</li>：全局唯一的单例模式，是加强版的singleTask，像应用桌面(Launcher)等系统应用使用。</p>
-<h2 id="u5B9E_u8DF5"><a href="#u5B9E_u8DF5" class="headerlink" title="实践"></a>实践</h2><h3 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h3><p>如下代码，就会创建两个StandardActivity的实例，同样每个实例都会走一次生命周期：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent(ModeListActivty.<span class="keyword">this</span>,StandardActivity.class);</span><br><span class="line">startActivity(intent);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure></p>
+<li>standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。</li><br><li>singleTop：当Activity处在栈顶时，创建新的Activity直接复用当前Activity，若Activity存在于任务栈中但是不在栈顶，则会重新创建一个新的Activity。</li><br><li>singleTask：当Activity在栈顶时，原理同singleTop，当Activity存在于任务栈但不在栈顶时，依旧会复用此Activity，同时销毁其上方的Activity，使它位于栈顶</li><br><li>singleInstance：全局唯一的单例模式，是加强版的singleTask，像应用桌面(Launcher)等系统应用使用。</li>
+
+
+<h2 id="u5B9E_u8DF5"><a href="#u5B9E_u8DF5" class="headerlink" title="实践"></a>实践</h2><h3 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h3><p>如下代码，就会创建两个StandardActivity的实例，同样每个实例都会走一次生命周期：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent(ModeListActivty.<span class="keyword">this</span>,StandardActivity.class);</span><br><span class="line">startActivity(intent);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
 <h3 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h3><h3 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h3><h3 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h3>
             
                 
