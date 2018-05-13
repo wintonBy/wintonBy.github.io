@@ -24,7 +24,12 @@ standard：是Activity默认的启动模式，每次启动Activity都会创建�
 standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。singleTop：当Activit">
 <meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/timg.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/2.jpg">
-<meta property="og:updated_time" content="2018-05-13T09:37:27.841Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/standard.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/singleTop1.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/singleTop2.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/singleTop1.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/singleTask2.png">
+<meta property="og:updated_time" content="2018-05-13T15:19:29.544Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再谈一次Activity启动模式">
 <meta name="twitter:description" content="引言　　Activity启动模式是一个老生常谈的话题，但平时并没有仔细去推敲，所以呢，就有了这篇文章呀，哈哈哈，找个理由写博客！
@@ -215,9 +220,10 @@ standard：是Activity默认的启动模式，每次启动Activity都会创建�
 <li>standard：是Activity默认的启动模式，每次启动Activity都会创建一个新的实例，无论任务栈中是否有Activity实例。</li><br><li>singleTop：当Activity处在栈顶时，创建新的Activity直接复用当前Activity，若Activity存在于任务栈中但是不在栈顶，则会重新创建一个新的Activity。</li><br><li>singleTask：当Activity在栈顶时，原理同singleTop，当Activity存在于任务栈但不在栈顶时，依旧会复用此Activity，同时销毁其上方的Activity，使它位于栈顶</li><br><li>singleInstance：全局唯一的单例模式，是加强版的singleTask，像应用桌面(Launcher)等系统应用使用。</li>
 
 
-<h2 id="u5B9E_u8DF5"><a href="#u5B9E_u8DF5" class="headerlink" title="实践"></a>实践</h2><h3 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h3><p>如下代码，就会创建两个StandardActivity的实例，同样每个实例都会走一次生命周期：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent(ModeListActivty.<span class="keyword">this</span>,StandardActivity.class);</span><br><span class="line">startActivity(intent);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
-<h3 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h3><h3 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h3><h3 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h3>
+<h2 id="u6DF1_u5165_u7406_u89E3"><a href="#u6DF1_u5165_u7406_u89E3" class="headerlink" title="深入理解"></a>深入理解</h2><h3 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h3><p>不管是否存在Activity的实例，每次都会创建一个新的，原理如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/standard.png" alt="standard"><br>默认我们在注册Activity时，默认就是standard;</p>
+<h3 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h3><p>场景一，当Activity在栈顶时，就会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTop1.png" alt="singleTop1"><br>场景二，当Activity不在栈顶时，就会重新创建，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTop2.png" alt="singleTop2"></p>
+<h3 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h3><p>场景一，当Activity在栈顶时，就会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTop1.png" alt="singleTask1"><br>场景二，当Activity不在栈顶时，依旧会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTask2.png" alt="singleTask2"></p>
+<h3 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h3>
             
                 
 
