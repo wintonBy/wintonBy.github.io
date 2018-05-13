@@ -29,7 +29,7 @@ standard：是Activity默认的启动模式，每次启动Activity都会创建�
 <meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/singleTop2.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/singleTop1.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/06/再谈一次Activity启动模式/singleTask2.png">
-<meta property="og:updated_time" content="2018-05-13T15:19:29.544Z">
+<meta property="og:updated_time" content="2018-05-13T15:37:30.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再谈一次Activity启动模式">
 <meta name="twitter:description" content="引言　　Activity启动模式是一个老生常谈的话题，但平时并没有仔细去推敲，所以呢，就有了这篇文章呀，哈哈哈，找个理由写博客！
@@ -222,8 +222,9 @@ standard：是Activity默认的启动模式，每次启动Activity都会创建�
 
 <h2 id="u6DF1_u5165_u7406_u89E3"><a href="#u6DF1_u5165_u7406_u89E3" class="headerlink" title="深入理解"></a>深入理解</h2><h3 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h3><p>不管是否存在Activity的实例，每次都会创建一个新的，原理如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/standard.png" alt="standard"><br>默认我们在注册Activity时，默认就是standard;</p>
 <h3 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h3><p>场景一，当Activity在栈顶时，就会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTop1.png" alt="singleTop1"><br>场景二，当Activity不在栈顶时，就会重新创建，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTop2.png" alt="singleTop2"></p>
-<h3 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h3><p>场景一，当Activity在栈顶时，就会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTop1.png" alt="singleTask1"><br>场景二，当Activity不在栈顶时，依旧会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTask2.png" alt="singleTask2"></p>
-<h3 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h3>
+<h3 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h3><p>场景一，当Activity在栈顶时，就会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTop1.png" alt="singleTask1"><br>场景二，当Activity不在栈顶时，依旧会复用Activity，效果如下图：<br><img src="/2018/05/06/再谈一次Activity启动模式/singleTask2.png" alt="singleTask2"><br>singleTask只在一个任务栈中保持唯一，如果不是同一个任务栈，依然会创建一个新的实例，一般我们一个应用内只有一个任务栈;</p>
+<h3 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h3><p>基本效果，同singleTask一致，但是Activity如果是singleInstance模式时，在所有的任务栈中都保持唯一；</p>
+
             
                 
 
