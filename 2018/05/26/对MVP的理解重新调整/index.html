@@ -6,22 +6,23 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Winton&#39;s Blog">
-    <title>能不能再学一下RxJava - Winton&#39;s Blog</title>
+    <title>对MVP的理解重新调整(关于Model) - Winton&#39;s Blog</title>
     <meta name="author" content="winton">
     
         <link rel="icon" href="/assets/images/favicon.png">
     
     
-    <meta name="description">
+    <meta name="description" content="##引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="能不能再学一下RxJava">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/能不能再学一下RxJava/index.html">
+<meta property="og:title" content="对MVP的理解重新调整(关于Model)">
+<meta property="og:url" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/index.html">
 <meta property="og:site_name" content="Winton's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2018-05-15T08:10:47.327Z">
+<meta property="og:description" content="##引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/MVP.jpg">
+<meta property="og:updated_time" content="2018-05-26T04:10:46.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="能不能再学一下RxJava">
-<meta name="twitter:description">
+<meta name="twitter:title" content="对MVP的理解重新调整(关于Model)">
+<meta name="twitter:description" content="##引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。">
     
     
     
@@ -185,22 +186,31 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            能不能再学一下RxJava
+            对MVP的理解重新调整(关于Model)
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Tue May 15 2018 16:10:47 GMT+0800">
+    <time itemprop="datePublished" content="Sat May 26 2018 11:44:33 GMT+0800">
 	
-		    05 15, 2018
+		    05 26, 2018
     	
     </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Android/">Android</a>
+
+
     
 </div>
 </div>
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            
+            <hr>
+<p><img src="/2018/05/26/对MVP的理解重新调整/MVP.jpg" alt="MVP"></p>
+<p>##引言<br>　　这两天又把自己以前写的<a href="https://github.com/wintonBy/APPFram" target="_blank" rel="external">APP快速框架</a>整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。</p>
+
             
                 
 
@@ -208,6 +218,13 @@
         </div>
     </div>
     <div class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/MVP/">MVP</a> <a class="tag tag--primary tag--small t-link" href="/tags/开发模式/">开发模式</a> <a class="tag tag--primary tag--small t-link" href="/tags/设计模式/">设计模式</a>
+
+            </div>
         
         <div class="post-actions-wrap">
     <nav>
@@ -222,7 +239,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/06/再谈一次Activity启动模式/" data-tooltip="再谈一次Activity启动模式">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/15/再爱（学）一次RXJava（一）/" data-tooltip="再爱（学）一次RXJava（一）">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -237,19 +254,19 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/15/能不能再学一下RxJava/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/26/对MVP的理解重新调整/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
        
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/15/能不能再学一下RxJava/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/26/对MVP的理解重新调整/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
 
          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/05/15/能不能再学一下RxJava/&amp;title=能不能再学一下RxJava">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/05/26/对MVP的理解重新调整/&amp;title=对MVP的理解重新调整(关于Model)">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
@@ -323,7 +340,7 @@ s.setAttribute('data-timestamp', +new Date());
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/06/再谈一次Activity启动模式/" data-tooltip="再谈一次Activity启动模式">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/15/再爱（学）一次RXJava（一）/" data-tooltip="再爱（学）一次RXJava（一）">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -338,19 +355,19 @@ s.setAttribute('data-timestamp', +new Date());
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/15/能不能再学一下RxJava/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/26/对MVP的理解重新调整/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
        
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/15/能不能再学一下RxJava/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/26/对MVP的理解重新调整/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
 
          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/05/15/能不能再学一下RxJava/&amp;title=能不能再学一下RxJava">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/05/26/对MVP的理解重新调整/&amp;title=对MVP的理解重新调整(关于Model)">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
@@ -377,17 +394,17 @@ s.setAttribute('data-timestamp', +new Date());
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/15/能不能再学一下RxJava/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/26/对MVP的理解重新调整/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/15/能不能再学一下RxJava/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/26/对MVP的理解重新调整/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/15/能不能再学一下RxJava/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/26/对MVP的理解重新调整/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
