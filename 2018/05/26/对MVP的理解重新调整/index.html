@@ -12,17 +12,28 @@
         <link rel="icon" href="/assets/images/favicon.png">
     
     
-    <meta name="description" content="##引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。">
+    <meta name="description" content="引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。
+MVP　　之前写MVP时，会首分一个http包，里面放网络相关东西，比如RetrofitClient、各种Response等等，然后在Presenter中进行数据获取，即网络接口的调用。这种做法的好处是：
+比较直观，容易理解
+直接处理各种网络异常、数据异常等弊">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="对MVP的理解重新调整(关于Model)">
 <meta property="og:url" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/index.html">
 <meta property="og:site_name" content="Winton's Blog">
-<meta property="og:description" content="##引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。">
+<meta property="og:description" content="引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。
+MVP　　之前写MVP时，会首分一个http包，里面放网络相关东西，比如RetrofitClient、各种Response等等，然后在Presenter中进行数据获取，即网络接口的调用。这种做法的好处是：
+比较直观，容易理解
+直接处理各种网络异常、数据异常等弊">
 <meta property="og:image" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/MVP.jpg">
-<meta property="og:updated_time" content="2018-05-26T04:10:46.241Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/qq.png">
+<meta property="og:updated_time" content="2018-06-06T12:03:56.779Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对MVP的理解重新调整(关于Model)">
-<meta name="twitter:description" content="##引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。">
+<meta name="twitter:description" content="引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。
+MVP　　之前写MVP时，会首分一个http包，里面放网络相关东西，比如RetrofitClient、各种Response等等，然后在Presenter中进行数据获取，即网络接口的调用。这种做法的好处是：
+比较直观，容易理解
+直接处理各种网络异常、数据异常等弊">
     
     
     
@@ -209,7 +220,16 @@
         <div class="main-content-wrap">
             <hr>
 <p><img src="/2018/05/26/对MVP的理解重新调整/MVP.jpg" alt="MVP"></p>
-<p>##引言<br>　　这两天又把自己以前写的<a href="https://github.com/wintonBy/APPFram" target="_blank" rel="external">APP快速框架</a>整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。</p>
+<h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　这两天又把自己以前写的<a href="https://github.com/wintonBy/APPFram" target="_blank" rel="external">APP快速框架</a>整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。</p>
+<h3 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h3><p>　　之前写MVP时，会首分一个http包，里面放网络相关东西，比如RetrofitClient、各种Response等等，然后在Presenter中进行数据获取，即网络接口的调用。<br>这种做法的好处是：</p>
+<p><li>比较直观，容易理解</li></p>
+<p><li>直接处理各种网络异常、数据异常等</li><br>弊端：</p>
+<p><li>网络加载都跟Presenter有关，代码复用性变低</li><br>之后把自己原先理解的MVP做一次调整，把调用网络加载的的地方下方到Model中，可以使代码复用性更高。举例说明：</p>
+<h4 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class UpdateInfoResponse extends BaseResponse &#123;&#10;    private UpdateInfo data;&#10;&#10;    public static void loadUpdateInfo(BaseSubscriber&#60;UpdateInfoResponse&#62; subscriber)&#123;&#10;        RetrofitClient.getInstance().updateInfo(subscriber);&#10;    &#125;&#10;&#10;    public UpdateInfo getData() &#123;&#10;        return data;&#10;    &#125;&#10;&#10;    public void setData(UpdateInfo data) &#123;&#10;        this.data = data;&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Presenter_u8C03_u7528"><a href="#Presenter_u8C03_u7528" class="headerlink" title="Presenter调用"></a>Presenter调用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void checkVersion() &#123;&#10;    UpdateInfoResponse.loadUpdateInfo(new BaseSubscriber&#60;UpdateInfoResponse&#62;()&#123;&#10;        @Override&#10;        public void onNext(UpdateInfoResponse updateInfoResponse) &#123;&#10;            super.onNext(updateInfoResponse);&#10;            if(!updateInfoResponse.isSuccess())&#123;&#10;                LogUtils.eTag(TAG,updateInfoResponse.getMessage());&#10;                return;&#10;            &#125;&#10;            if(hasNewVersion(updateInfoResponse.getData()))&#123;&#10;                getView().showNewVersion(updateInfoResponse.getData());&#10;            &#125;&#10;        &#125;&#10;&#10;        @Override&#10;        public void onError(Throwable e) &#123;&#10;            super.onError(e);&#10;        &#125;&#10;    &#125;);&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>考虑到这么做是因为个人觉得Presenter的变动会比Model变动更大。<br>考虑到一些共性时，可在model中再封装一次回调，使调用者做更少的事情。<br><img src="/2018/05/26/对MVP的理解重新调整/1.png" alt="mvpimg"></p>
+<hr>
+<p>欢迎大家，一起来探讨技术!!!<br><img src="/2018/05/26/对MVP的理解重新调整/qq.png" alt="img"></p>
 
             
                 
