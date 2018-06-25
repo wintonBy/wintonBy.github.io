@@ -6,22 +6,31 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Winton&#39;s Blog">
-    <title>再爱（学）一次RXJava（一） - Winton&#39;s Blog</title>
+    <title>如何减少带薪编译时间 - Winton&#39;s Blog</title>
     <meta name="author" content="winton">
     
         <link rel="icon" href="/assets/images/favicon.png">
     
     
-    <meta name="description">
+    <meta name="description" content="引言　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!
+实操减少Gradle的启动时间1org.gradle.daemon=true
+　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：
+# The Gradle">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="再爱（学）一次RXJava（一）">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/index.html">
+<meta property="og:title" content="如何减少带薪编译时间">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/如何减少带薪编译时间/index.html">
 <meta property="og:site_name" content="Winton's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2018-05-15T08:42:35.078Z">
+<meta property="og:description" content="引言　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!
+实操减少Gradle的启动时间1org.gradle.daemon=true
+　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：
+# The Gradle">
+<meta property="og:updated_time" content="2018-06-25T08:07:01.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="再爱（学）一次RXJava（一）">
-<meta name="twitter:description">
+<meta name="twitter:title" content="如何减少带薪编译时间">
+<meta name="twitter:description" content="引言　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!
+实操减少Gradle的启动时间1org.gradle.daemon=true
+　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：
+# The Gradle">
     
     
     
@@ -185,22 +194,31 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            再爱（学）一次RXJava（一）
+            如何减少带薪编译时间
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Tue May 15 2018 16:42:35 GMT+0800">
+    <time itemprop="datePublished" content="Mon Jun 25 2018 15:33:14 GMT+0800">
 	
-		    05 15, 2018
+		    06 25, 2018
     	
     </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Android/">Android</a>
+
+
     
 </div>
 </div>
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            
+            <h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!</p>
+<h2 id="u5B9E_u64CD"><a href="#u5B9E_u64CD" class="headerlink" title="实操"></a>实操</h2><h3 id="u51CF_u5C11Gradle_u7684_u542F_u52A8_u65F6_u95F4"><a href="#u51CF_u5C11Gradle_u7684_u542F_u52A8_u65F6_u95F4" class="headerlink" title="减少Gradle的启动时间"></a>减少Gradle的启动时间</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.daemon=<span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<p>　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：</p>
+<p style="background: #000000"><br># The Gradle daemon aims to improve the startup and execution time of Gradle.<br># When set to true the Gradle daemon is to run the build.</p>
             
                 
 
@@ -209,12 +227,19 @@
     </div>
     <div class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Android编译/">Android编译</a> <a class="tag tag--primary tag--small t-link" href="/tags/Gradle/">Gradle</a>
+
+            </div>
+        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/26/对MVP的理解重新调整/"  data-tooltip="对MVP的理解重新调整(关于Model)">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/12/个人简历/"  data-tooltip="个人简历">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -222,7 +247,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/06/再谈一次Activity启动模式/" data-tooltip="再谈一次Activity启动模式">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/26/对MVP的理解重新调整/" data-tooltip="对MVP的理解重新调整(关于Model)">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -237,19 +262,19 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/06/25/如何减少带薪编译时间/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
        
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/06/25/如何减少带薪编译时间/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
 
          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/&amp;title=再爱（学）一次RXJava（一）">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/06/25/如何减少带薪编译时间/&amp;title=如何减少带薪编译时间">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
@@ -315,7 +340,7 @@ s.setAttribute('data-timestamp', +new Date());
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/26/对MVP的理解重新调整/"  data-tooltip="对MVP的理解重新调整(关于Model)">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/12/个人简历/"  data-tooltip="个人简历">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -323,7 +348,7 @@ s.setAttribute('data-timestamp', +new Date());
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/06/再谈一次Activity启动模式/" data-tooltip="再谈一次Activity启动模式">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/26/对MVP的理解重新调整/" data-tooltip="对MVP的理解重新调整(关于Model)">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -338,19 +363,19 @@ s.setAttribute('data-timestamp', +new Date());
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://yoursite.com/2018/06/25/如何减少带薪编译时间/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
        
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/06/25/如何减少带薪编译时间/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
 
          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/&amp;title=再爱（学）一次RXJava（一）">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://yoursite.com/2018/06/25/如何减少带薪编译时间/&amp;title=如何减少带薪编译时间">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
@@ -377,17 +402,17 @@ s.setAttribute('data-timestamp', +new Date());
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2018/06/25/如何减少带薪编译时间/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/06/25/如何减少带薪编译时间/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/05/15/再爱（学）一次RXJava（一）/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2018/06/25/如何减少带薪编译时间/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
