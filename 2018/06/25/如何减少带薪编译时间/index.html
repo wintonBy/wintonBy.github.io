@@ -13,24 +13,20 @@
     
     
     <meta name="description" content="引言　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!
-实操减少Gradle的启动时间1org.gradle.daemon=true
-　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：
-# The Gradle">
+实操ps:以下这些配置都是编写在项目根目录下的：gradle.properties文件当中。### 减少Gradle的启动时间1org.gradle.daemon=tru">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="如何减少带薪编译时间">
 <meta property="og:url" content="http://yoursite.com/2018/06/25/如何减少带薪编译时间/index.html">
 <meta property="og:site_name" content="Winton's Blog">
 <meta property="og:description" content="引言　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!
-实操减少Gradle的启动时间1org.gradle.daemon=true
-　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：
-# The Gradle">
-<meta property="og:updated_time" content="2018-06-25T08:10:24.721Z">
+实操ps:以下这些配置都是编写在项目根目录下的：gradle.properties文件当中。### 减少Gradle的启动时间1org.gradle.daemon=tru">
+<meta property="og:image" content="http://yoursite.com/2018/06/25/如何减少带薪编译时间/speed.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/25/如何减少带薪编译时间/qq.png">
+<meta property="og:updated_time" content="2018-06-25T09:00:20.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何减少带薪编译时间">
 <meta name="twitter:description" content="引言　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!
-实操减少Gradle的启动时间1org.gradle.daemon=true
-　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：
-# The Gradle">
+实操ps:以下这些配置都是编写在项目根目录下的：gradle.properties文件当中。### 减少Gradle的启动时间1org.gradle.daemon=tru">
     
     
     
@@ -215,10 +211,15 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!</p>
-<h2 id="u5B9E_u64CD"><a href="#u5B9E_u64CD" class="headerlink" title="实操"></a>实操</h2><h3 id="u51CF_u5C11Gradle_u7684_u542F_u52A8_u65F6_u95F4"><a href="#u51CF_u5C11Gradle_u7684_u542F_u52A8_u65F6_u95F4" class="headerlink" title="减少Gradle的启动时间"></a>减少Gradle的启动时间</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.daemon=<span class="keyword">true</span></span><br></pre></td></tr></table></figure>
-<p>　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：</p>
-<p style="background: #000000;color: #ffffff"><br># The Gradle daemon aims to improve the startup and execution time of Gradle.<br># When set to true the Gradle daemon is to run the build.</p>
+            <h2 id="u5F15_u8A00"><a href="#u5F15_u8A00" class="headerlink" title="引言"></a>引言</h2><p>　　做Android开发的大兄弟肯定都知道Android Studio编译使用的是Gradle，项目大起来，Gradle编译花个5min~10min是常有的事情，一天编译调试10次是常有的事情，也就被大家常说的带薪编译!!!<br><img src="/2018/06/25/如何减少带薪编译时间/speed.jpg" alt="img"></p>
+<h2 id="u5B9E_u64CD"><a href="#u5B9E_u64CD" class="headerlink" title="实操"></a>实操</h2><p style="color: red">ps:以下这些配置都是编写在项目根目录下的：gradle.properties文件当中。</p><br>### 减少Gradle的启动时间<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.daemon=<span class="keyword">true</span></span><br></pre></td></tr></table></figure><br><br>　　这样做的目的是减少每次启动Gradle的启动。官方原话如下：<br><p style="background: #000000;color: #ffffff">When set to true the Gradle Daemon is used to run the build. Default is true.</p>
+
+<h3 id="u542F_u7528_u5E76_u884C_u6784_u5EFA"><a href="#u542F_u7528_u5E76_u884C_u6784_u5EFA" class="headerlink" title="启用并行构建"></a>启用并行构建</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.parallel=<span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<p>　　当项目中有多个模块时，而且模块之间<span style="color: red">无耦合</span>时，可以启用并行编译。官方原话如下：</p>
+<p style="background:#000000;color: #ffffff">Parallel builds require projects to be decoupled at execution time, i.e. tasks in different projects must not modify shared state. Read more about that topic in the User Manual before using –parallel extensively. Also be aware that Gradle versions before 4.0 could run clean and build tasks in parallel, resulting in failures. On these older versions it is best to call clean separately.</p><br>效果，可以参看这个<a href="https://guides.gradle.org/performance/?_ga=2.111724748.938230279.1529911846-2106290460.1529911846#parallel_execution" target="_blank" rel="external">链接</a><br>### 启用按需编译<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.configureondemand=<span class="keyword">true</span></span><br></pre></td></tr></table></figure><br><br>　　项目中可能存在很多模块，可能部分模块是本次编译时不需要的，那么配置此项可以不对那些不需要的modle进行编译，从而减少编译时间，官方原话如下：<br><p style="background:#000000;color: #ffffff">Enables incubating configuration on demand, where Gradle will attempt to configure only necessary projects.</p>
+
+<h2 id="u66F4_u591A_u5173_u4E8EGradle_u914D_u7F6E_u9879_u7684_u8BF4_u660E_uFF0C_u70B9_u51FB_u6B64_u5904"><a href="#u66F4_u591A_u5173_u4E8EGradle_u914D_u7F6E_u9879_u7684_u8BF4_u660E_uFF0C_u70B9_u51FB_u6B64_u5904" class="headerlink" title="　　更多关于Gradle配置项的说明，点击此处"></a>　　更多关于Gradle配置项的说明，<a href="https://docs.gradle.org/current/userguide/build_environment.html" target="_blank" rel="external">点击此处</a></h2><p>欢迎大家，一起来探讨技术!!!<br><img src="/2018/06/25/如何减少带薪编译时间/qq.png" alt="img"></p>
+
             
                 
 
