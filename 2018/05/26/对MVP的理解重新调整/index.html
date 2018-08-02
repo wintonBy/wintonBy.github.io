@@ -27,7 +27,7 @@ MVP　　之前写MVP时，会首分一个http包，里面放网络相关东西�
 <meta property="og:image" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/MVP.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/26/对MVP的理解重新调整/qq.png">
-<meta property="og:updated_time" content="2018-06-06T12:03:56.779Z">
+<meta property="og:updated_time" content="2018-06-06T12:03:56.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对MVP的理解重新调整(关于Model)">
 <meta name="twitter:description" content="引言　　这两天又把自己以前写的APP快速框架整理了一番，发现以前写的有些理解不是很到位，尤其是对Model的理解，所以这一次又重新理一下。
@@ -342,6 +342,15 @@ s.setAttribute('data-timestamp', +new Date());
     <span class="copyrights">
         Copyrights &copy; 2018 winton. All Rights Reserved.
     </span>
+    {% if theme.footer.counter %}
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+{% endif %}
 </footer>
 
             </div>
